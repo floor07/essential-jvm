@@ -6,4 +6,5 @@
 * [02垃圾回收器](02la-ji-hui-shou-qi.md)
 * [03GC日志说明与回收策略](03gcri-zhi-shuo-ming-yu-hui-shou-ce-lve.md)
 * [04JDK命令行工具](04jdkming-ling-xing-gong-ju.md)
+* [05类加载机制](05lei-jia-zai-ji-zhi.md)
 
