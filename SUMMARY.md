@@ -8,4 +8,5 @@
 * [04JDK命令行工具](04jdkming-ling-xing-gong-ju.md)
 * [05类加载机制](05lei-jia-zai-ji-zhi.md)
 * [06类加载过程](06lei-jia-zai-guo-cheng.md)
+* [07类加载机制](07lei-jia-zai-ji-zhi.md)
 
