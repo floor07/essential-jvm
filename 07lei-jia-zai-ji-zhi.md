@@ -1,74 +1,16 @@
-
-
-**JVM中的类的唯一性：**
+## **JVM中的类的唯一性：**
 
 由类加载器+和这个类本身确定。
 
-**双亲委派模型**
+## **双亲委派模型**
 
 ![](/assets/shuangqiweipai.png)
 
-&lt;!--  
- /\* Font Definitions \*/  
- @font-face  
-	{font-family:"Cambria Math";  
-	panose-1:2 4 5 3 5 4 6 3 2 4;  
-	mso-font-charset:1;  
-	mso-generic-font-family:roman;  
-	mso-font-format:other;  
-	mso-font-pitch:variable;  
-	mso-font-signature:0 0 0 0 0 0;}  
-@font-face  
-	{font-family:微软雅黑;  
-	panose-1:2 11 5 3 2 2 4 2 2 4;  
-	mso-font-charset:134;  
-	mso-generic-font-family:swiss;  
-	mso-font-pitch:variable;  
-	mso-font-signature:-2147483001 684670034 22 0 262175 0;}  
-@font-face  
-	{font-family:"\@微软雅黑";  
-	panose-1:2 11 5 3 2 2 4 2 2 4;  
-	mso-font-charset:134;  
-	mso-generic-font-family:swiss;  
-	mso-font-pitch:variable;  
-	mso-font-signature:-2147483001 684670034 22 0 262175 0;}  
- /\* Style Definitions \*/  
- p.MsoNormal, li.MsoNormal, div.MsoNormal  
-	{mso-style-unhide:no;  
-	mso-style-qformat:yes;  
-	mso-style-parent:"";  
-	margin:0cm;  
-	margin-bottom:.0001pt;  
-	mso-pagination:none;  
-	font-size:10.5pt;  
-	mso-bidi-font-size:11.0pt;  
-	font-family:"微软雅黑","sans-serif";  
-	mso-bidi-font-family:"Times New Roman";}  
-.MsoChpDefault  
-	{mso-style-type:export-only;  
-	mso-default-props:yes;  
-	mso-ascii-font-family:微软雅黑;  
-	mso-fareast-font-family:微软雅黑;  
-	mso-hansi-font-family:微软雅黑;  
-	mso-font-kerning:0pt;}  
- /\* Page Definitions \*/  
- @page  
-	{mso-page-border-surround-header:no;  
-	mso-page-border-surround-footer:no;}  
-@page Section1  
-	{size:612.0pt 792.0pt;  
-	margin:72.0pt 90.0pt 72.0pt 90.0pt;  
-	mso-header-margin:36.0pt;  
-	mso-footer-margin:36.0pt;  
-	mso-paper-source:0;}  
-div.Section1  
-	{page:Section1;}  
---&gt;  
 
 
 类加载请求时，先委托给父类进行加载，父加载器也是如此。当父类加载器不能加载事，当前类才进行加载。
 
-**tomcat正统加载模型**
+## **tomcat正统加载模型**
 
 tomcat的类加载器介绍
 
@@ -87,13 +29,13 @@ tomcat的类加载器介绍
 
 ![](/assets/tomcatclassLoader.png)
 
-破坏双亲委派模型
+## 破坏双亲委派模型
 
 1.java1.2之前的程序做兼容 向前兼容
 
 2.JNDI等，（允许父类加载器委托子类加载器加载，打通了双亲委派模型的逆向）。
 
- （使用，线程上下文加载器 Thread Context ClassLoader，这个由java.lang.Thread中的setContextClassLoader\(\)方法进行设置）
+（使用，线程上下文加载器 Thread Context ClassLoader，这个由java.lang.Thread中的setContextClassLoader\(\)方法进行设置）
 
 3.OSGi（热部署可以平级查找）：
 
@@ -109,7 +51,7 @@ Bundle C：声明发布了packageC，依赖了packageA
 
 ![](/assets/bundle.png)
 
-OSGi加载规则如下：
+### OSGi加载规则如下：
 
 将ava.\*开头的委派给父类加载器。
 
