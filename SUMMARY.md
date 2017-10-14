@@ -9,4 +9,5 @@
 * [05类加载机制](05lei-jia-zai-ji-zhi.md)
 * [06类加载过程](06lei-jia-zai-guo-cheng.md)
 * [07类加载机制](07lei-jia-zai-ji-zhi.md)
+* [08虚拟机运势是帧栈信息](08xu-ni-ji-yun-shi-shi-zheng-zhan-xin-xi.md)
 
